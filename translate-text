@@ -1,0 +1,9 @@
+# translate a korean text to english
+!pip install googletrans==3.1.0a0
+
+from googletrans import Translator
+
+# init the Google API translator
+translator = Translator()
+
+df['수입/지출'] = df['수입/지출'].apply(lambda x: translator.translate(x, dest='en').text)
