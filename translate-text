@@ -7,3 +7,10 @@ from googletrans import Translator
 translator = Translator()
 
 df['수입/지출'] = df['수입/지출'].apply(lambda x: translator.translate(x, dest='en').text)
+
+'''def translate_text(text):
+    if tag_language == 'en':
+        return text
+    translate_client = translate.Client()
+    result = translate_client.translate(text, target_language=tag_language)
+    return result['translatedText']'''
